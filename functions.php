@@ -263,19 +263,36 @@ function sakura_create_post_types () {
 
 	register_taxonomy('mouses_category', 'mouses', [
 		'labels' => [
-			'name' => 'Catégorie',
-			'singular_name' => 'Catégorie',
-			'all_items' => 'Toutes les catégories',
-			'search_items' => 'Rechercher une catégorie',
-			'add_new_item' => 'Ajouter une catégorie',
-			'edit_item' => 'Modifier la catégorie',
-			'update_item' => 'Mettre à jour la catégorie',
-			'parent_item' => 'Catégorie parente',
-			'not_found' => 'Catégorie introuvable',
-			'popular_items' => 'Catégories récurrentes',
-			'new_item_name' => 'Nom de la nouvelle catégorie'
+			'name' => 'Sexe',
+			'singular_name' => 'Sexe',
+			'all_items' => 'Tous les sexes',
+			'search_items' => 'Rechercher un sexe',
+			'add_new_item' => 'Ajouter un sexe',
+			'edit_item' => 'Modifier le sexe',
+			'update_item' => 'Mettre à jour le sexe',
+			'parent_item' => 'Sexe parent',
+			'not_found' => 'Sexe introuvable',
+			'popular_items' => 'Sexes récurrents',
+			'new_item_name' => 'Nom du nouveau sexe'
 		],
-		'hierarchical' => true
+		'hierarchical' => false
+	]);
+
+	register_taxonomy('mouses_id', 'mouses', [
+		'labels' => [
+			'name' => 'Identifiant',
+			'singular_name' => 'Identifiant',
+			'all_items' => 'Tous les identifiants',
+			'search_items' => 'Rechercher un identifiant',
+			'add_new_item' => 'Ajouter un identifiant',
+			'edit_item' => 'Modifier l’identifiant',
+			'update_item' => 'Mettre à jour l’identifiant',
+			'parent_item' => 'Identifiant parent',
+			'not_found' => 'Identifiant introuvable',
+			'popular_items' => 'Identifiants récurrents',
+			'new_item_name' => 'Nom du nouvel identifiant'
+		],
+		'hierarchical' => false
 	]);
 }
 add_action('init', 'sakura_create_post_types');
