@@ -258,7 +258,8 @@ function sakura_create_post_types () {
 		'supports' => ['title', 'editor', 'thumbnail', 'revisions' => false, 'comments'],
 		'description' => 'Permet d’ajouter des souris',
 		'public' => true,
-		'menu_icon' => 'dashicons-pets'
+		'menu_icon' => 'dashicons-pets',
+		'menu_position' => '6'
 	]);
 
 	register_taxonomy('mouses_category', 'mouses', [
@@ -293,6 +294,24 @@ function sakura_create_post_types () {
 			'new_item_name' => 'Nom du nouvel identifiant'
 		],
 		'hierarchical' => false
+	]);
+
+	register_post_type('litter', [
+		'labels' => [
+			'name' => 'Portées',
+			'singular_name' => 'Portée',
+			'all_items' => 'Toutes les portées',
+			'add_new_items' => 'Ajouter une portée',
+			'edit_item' => 'Modifier la portée',
+			'view_item' => 'Voir la portée',
+			'search_items' => 'Rechercher une portée'
+		],
+		'taxonomies' => ['litter_category'],
+		'supports' => ['title', 'editor' => false, 'thumbnail' => false, 'revisions' => false, 'comments' => false],
+		'description' => 'Permet d’ajouter des souris',
+		'public' => true,
+		'menu_icon' => 'dashicons-awards',
+		'menu_position' => '7'
 	]);
 }
 add_action('init', 'sakura_create_post_types');
