@@ -68,8 +68,8 @@ function sakura_theme_support() {
 	 * Adds `async` and `defer` support for scripts registered or enqueued
 	 * by the theme.
 	 */
-	$loader = new Sakura_Script_Loader();
-	add_filter('script_loader_tag', array($loader, 'filter_script_loader_tag'), 10, 2);
+	// $loader = new Sakura_Script_Loader();
+	// add_filter('script_loader_tag', array($loader, 'filter_script_loader_tag'), 10, 2);
 
 }
 add_action('after_setup_theme', 'sakura_theme_support');
