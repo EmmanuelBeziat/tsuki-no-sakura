@@ -262,7 +262,7 @@ function sakura_create_post_types () {
 		'menu_position' => 6
 	]);
 
-	register_taxonomy('mouses_category', 'mouses', [
+	/* register_taxonomy('mouses_category', 'mouses', [
 		'labels' => [
 			'name' => 'Sexe',
 			'singular_name' => 'Sexe',
@@ -277,7 +277,7 @@ function sakura_create_post_types () {
 			'new_item_name' => 'Nom du nouveau sexe'
 		],
 		'hierarchical' => false
-	]);
+	]); */
 
 	register_taxonomy('mouses_id', 'mouses', [
 		'labels' => [
