@@ -259,7 +259,7 @@ function sakura_create_post_types () {
 		'description' => 'Permet d’ajouter des souris',
 		'public' => true,
 		'menu_icon' => 'dashicons-pets',
-		'menu_position' => '6'
+		'menu_position' => 6
 	]);
 
 	register_taxonomy('mouses_category', 'mouses', [
@@ -311,7 +311,7 @@ function sakura_create_post_types () {
 		'description' => 'Permet d’ajouter des souris',
 		'public' => true,
 		'menu_icon' => 'dashicons-awards',
-		'menu_position' => '7'
+		'menu_position' => 7
 	]);
 }
 add_action('init', 'sakura_create_post_types');
