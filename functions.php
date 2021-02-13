@@ -247,12 +247,12 @@ function sakura_create_post_types () {
 	register_post_type('mouses', [
 		'labels' => [
 			'name' => 'Souris',
-			'singular_name' => 'Souri',
+			'singular_name' => 'Souris',
 			'all_items' => 'Toutes les souris',
-			'add_new_items' => 'Ajouter une souri',
-			'edit_item' => 'Modifier la souri',
-			'view_item' => 'Voir la souri',
-			'search_items' => 'Rechercher une souri'
+			'add_new_items' => 'Ajouter une souris',
+			'edit_item' => 'Modifier la souris',
+			'view_item' => 'Voir la souris',
+			'search_items' => 'Rechercher une souris'
 		],
 		'taxonomies' => ['mouses_category'],
 		'supports' => ['title', 'editor', 'thumbnail', 'revisions' => false, 'comments'],
