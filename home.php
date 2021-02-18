@@ -15,6 +15,7 @@
 	'post_type' => 'souris',
 	'posts_per_page' => -1
 ]); ?>
+<?php var_dump($loop) ?>
 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 <a href="<?php echo get_permalink() ?>" <?php post_class('') ?> id="post-<?php the_ID(); ?>">
 	<h2><?= get_the_title() ?></h2>
