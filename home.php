@@ -15,8 +15,8 @@
 	'post_type' => 'mouses',
 	'posts_per_page' => -1
 ]); ?>
-<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $post = $loop->the_post(); ?>
-<?php debug($post) ?>
+<?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
+<?php debug($loop->the_post()) ?>
 <a href="<?php echo get_permalink() ?>" <?php post_class('') ?> id="post-<?php the_ID(); ?>">
 	<h2><?= get_the_title() ?></h2>
 	<ul>
