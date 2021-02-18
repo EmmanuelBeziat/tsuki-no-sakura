@@ -20,7 +20,7 @@
 	<h2><?= get_the_title() ?></h2>
 	<ul>
 		<li>Photo: <code><?= get_field('presentation')['photo'] ?></code></li>
-		<li>ID: <code><?php debug(get_field('presentation')['identifiant']) ?></code></li>
+		<li>ID: <code><?= get_field('presentation')['identifiant']['name'] ?></code></li>
 		<li>Prénom: <code><?= get_field('presentation')['prenom'] ?> (signification)</code></li>
 		<li>Sexe: <code><?= get_field('presentation')['sexe'] ?></code></li>
 		<li>Origines: <code><?= get_field('origines')['provenance'] ?></code></li>
@@ -29,7 +29,7 @@
 		<li>Type de poil: <code><?= get_field('apparence')['poil'] ?></code></li>
 		<li>Poids: <code><?= get_field('apparence')['poids'] ?></code></li>
 		<li>Status: <code><?= get_field('autres')['status'] ?></code></li>
-		<li>Vente: <code><?= get_field('autres')['vente'] ?></code></li>
+		<li>Vente: <code><? debug(get_field('autres')['vente']) ?></code></li>
 		<li>Génotype: <code><?= get_field('autres')['genotype'] ?></code></li>
 	</ul>
 </a>
