@@ -29,7 +29,7 @@
 		<li>Type de poil: <code><?= get_field('apparence')['poil'] ?></code></li>
 		<li>Poids: <code><?= get_field('apparence')['poids'] ?></code></li>
 		<li>Status: <code><?= get_field('autres')['status'] ?></code></li>
-		<li>Vente: <code><? debug(get_field('autres')['vente']) ?></code></li>
+		<li>Vente: <code><?php debug(get_field('autres')['vente']) ?></code></li>
 		<li>Génotype: <code><?= get_field('autres')['genotype'] ?></code></li>
 	</ul>
 </a>
