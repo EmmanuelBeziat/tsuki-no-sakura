@@ -20,7 +20,7 @@
 	<h2><?= get_the_title() ?></h2>
 	<ul>
 		<li>Photo: <code><?= get_field('presentation')['photo'] ?></code></li>
-		<li>ID: <code><?= get_field('presentation')['identifiant'] ?></code></li>
+		<li>ID: <code><?= //get_field('presentation')['identifiant'] ?></code></li>
 		<li>Prénom: <code><?= get_field('presentation')['prenom'] ?> (signification)</code></li>
 		<li>Sexe: <code><?= get_field('presentation')['sexe'] ?></code></li>
 		<li>Origines: <code><?= get_field('origines')['provenance'] ?></code></li>
