@@ -12,7 +12,7 @@
 
 <section id="query" class="query">
 <?php $loop = new WP_Query([
-	'post_type' => 'mouses',
+	'post_type' => 'test',
 	'posts_per_page' => -1
 ]); ?>
 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $post = $loop->the_post(); ?>
