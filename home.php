@@ -18,6 +18,7 @@
 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 <a href="<?php echo get_permalink() ?>" <?php post_class('') ?> id="post-<?php the_ID(); ?>">
 	<h2><?= get_the_title() ?></h2>
+	<?php debug(get_field('presentation')) ?>
 	<ul>
 		<li>Photo: <code><?= get_field('photo') ?></code></li>
 		<li>ID: <code><?= get_field('identifiant') ?></code></li>
