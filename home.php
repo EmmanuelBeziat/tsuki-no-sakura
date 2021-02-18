@@ -12,10 +12,9 @@
 
 <section id="query" class="query">
 <?php $loop = new WP_Query([
-	'post_type' => 'souris',
+	'post_type' => 'mouses',
 	'posts_per_page' => -1
 ]); ?>
-<?php var_dump($loop) ?>
 <?php if ($loop->have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 <a href="<?php echo get_permalink() ?>" <?php post_class('') ?> id="post-<?php the_ID(); ?>">
 	<h2><?= get_the_title() ?></h2>
