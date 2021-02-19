@@ -50,14 +50,14 @@ $souris = (object) [
 	padding: calc(2rem + 30px) 2rem 1rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
-	grid-template-rows: repeat(4, 1fr);
+	grid-template-rows: auto 2fr 1fr auto;
 	gap: 0;
 }
 
 .souris-lineage {
 	grid-area: 1 / 1 / 2 / 3;
 	margin: auto 0 0 auto;
-	font-size: 3rem;
+	font: 400 3rem/1 'Just Another Hand';
 }
 .souris-sexe {
 	grid-area: 1 / 5 / 3 / 7;
@@ -71,12 +71,11 @@ $souris = (object) [
 .souris-nom {
 	grid-area: 2 / 2 / 4 / 6;
 	margin: 0 auto auto;
-	font-family: 'Fredericka the Great';
-	font-size: 8.75rem;
+	font: 400 8.75rem/1 'Fredericka the Great';
 }
 .souris-signification {
 	grid-area: 3 / 4 / 4 / 7;
-	font-size: 4rem;
+	font: 400 4rem/1 'Just Another Hand';
 	text-align: left;
 }
 .souris-description {
@@ -114,7 +113,7 @@ $souris = (object) [
 					<?php endif ?>
 				</h1>
 
-				<div class="souris-signification"><?= $souris->signification ?></div>
+				<div class="souris-signification">(<?= $souris->signification ?>)</div>
 
 				<div class="souris-vente">
 					<?php if ($souris->vente) : ?>
