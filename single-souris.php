@@ -11,9 +11,14 @@
 
 get_header();
 
+$args = [
+	'post_type' => 'souris',
+	'posts_per_page' => -1
+];
+
 /* Start the Loop */
-while (have_posts()) : the_post();
-	debug(the_post());
+while ($loop->have_posts()) : $loop->the_post();
+	debug($loop->the_post(););
 	get_template_part('template-parts/souris.php');
 endwhile;
 
