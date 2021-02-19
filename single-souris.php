@@ -16,6 +16,8 @@ $args = [
 	'posts_per_page' => -1
 ];
 
+$loop = new WP_Query($args);
+
 /* Start the Loop */
 while ($loop->have_posts()) : $loop->the_post();
 	debug($loop->the_post(););
