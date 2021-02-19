@@ -39,7 +39,7 @@ $souris = (object) [
 			<?php if ($souris->nom && $souris->signification) : ?>
 				<dt>Prénom et signification</dt>
 				<dd><?= $souris->nom ?> (<?= $souris->signification ?>)</dd>
-			<?php else if ($souris->nom && !$souris->signification) : ?>
+			<?php elseif ($souris->nom) : ?>
 				<dt>Prénom</dt>
 				<dd><?= $souris->nom ?></dd>
 			<?php endif ?>
