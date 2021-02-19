@@ -92,31 +92,22 @@ add_action('after_setup_theme', 'sakura_theme_support');
 /**
  * Register and Enqueue Styles.
  */
-function sakura_register_styles() {
-
-	$theme_version = wp_get_theme()->get('Version');
-
-  wp_enqueue_style('sakura-style', get_template_directory_uri() . '/assets/css/main.min.css', array(), $theme_version);
-}
-
-add_action('wp_enqueue_scripts', 'sakura_register_styles');
+include_once get_template_directory_uri() . '/inc/assets.php'
 
 /**
- * Register and Enqueue Scripts.
+ * REST API
  */
-function sakura_register_scripts() {
+// require_once get_template_directory_uri() . '/inc/rest.php'
+// require_once get_template_directory_uri() . '/inc/rest-endpoints.php'
 
-	$theme_version = wp_get_theme()->get('Version');
+/**
+ * Custom Post Types
+ */
+require_once get_template_directory_uri() . '/inc/custom-post-types.php'
 
-	if ((!is_admin()) && is_singular() && comments_open() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
-	}
 
-	wp_enqueue_script('sakura-js', get_template_directory_uri() . '/assets/js/main.min.js', array(), $theme_version, false);
-	wp_script_add_data('sakura-js', 'defer', true);
-}
-
-add_action('wp_enqueue_scripts', 'sakura_register_scripts');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'wlwmanifest_link');
 
 /**
  * Register navigation menus uses wp_nav_menu in five places.
@@ -210,28 +201,6 @@ function sakura_classic_editor_styles() {
 // add_action('init', 'sakura_classic_editor_styles');
 
 /**
- * Output Customizer settings in the classic editor.
- * Adds styles to the head of the TinyMCE iframe. Kudos to @Otto42 for the original solution.
- *
- * @param array $mce_init TinyMCE styles.
- * @return array TinyMCE styles.
- */
-/* function sakura_add_classic_editor_customizer_styles($mce_init) {
-
-	$styles = sakura_get_customizer_css('classic-editor');
-
-	if (! isset($mce_init['content_style'])) {
-		$mce_init['content_style'] = $styles . ' ';
-	} else {
-		$mce_init['content_style'] .= ' ' . $styles . ' ';
-	}
-
-	return $mce_init;
-
-}
-add_filter('tiny_mce_before_init', 'sakura_add_classic_editor_customizer_styles'); */
-
-/**
  * Overwrite default more tag with styling and screen reader markup.
  *
  * @param string $html The default output HTML for the more tag.
@@ -240,117 +209,11 @@ add_filter('tiny_mce_before_init', 'sakura_add_classic_editor_customizer_styles'
 function sakura_read_more_tag($html) {
 	return preg_replace('/<a(.*)>(.*)<\/a>/iU', sprintf('<div class="read-more-button-wrap"><a$1><span class="faux-button">$2</span> <span class="screen-reader-text">"%1$s"</span></a></div>', get_the_title(get_the_ID())), $html);
 }
-
 add_filter('the_content_more_link', 'sakura_read_more_tag');
 
-function sakura_create_post_types () {
-	register_post_type('mouses', [
-		'labels' => [
-			'name' => 'Souris',
-			'singular_name' => 'Souris',
-			'all_items' => 'Toutes les souris',
-			'add_new_items' => 'Ajouter une souris',
-			'edit_item' => 'Modifier la souris',
-			'view_item' => 'Voir la souris',
-			'search_items' => 'Rechercher une souris'
-		],
-		'taxonomies' => ['mouses_category'],
-		'supports' => ['title', 'editor', 'thumbnail', 'revisions' => false, 'comments'],
-		'description' => 'Permet d’ajouter des souris',
-		'public' => true,
-		'menu_icon' => 'dashicons-pets',
-		'menu_position' => 6
-	]);
-
-	/* register_taxonomy('mouses_category', 'mouses', [
-		'labels' => [
-			'name' => 'Sexe',
-			'singular_name' => 'Sexe',
-			'all_items' => 'Tous les sexes',
-			'search_items' => 'Rechercher un sexe',
-			'add_new_item' => 'Ajouter un sexe',
-			'edit_item' => 'Modifier le sexe',
-			'update_item' => 'Mettre à jour le sexe',
-			'parent_item' => 'Sexe parent',
-			'not_found' => 'Sexe introuvable',
-			'popular_items' => 'Sexes récurrents',
-			'new_item_name' => 'Nom du nouveau sexe'
-		],
-		'hierarchical' => false
-	]); */
-
-	register_taxonomy('mouses_id', 'mouses', [
-		'labels' => [
-			'name' => 'Identifiant',
-			'singular_name' => 'Identifiant',
-			'all_items' => 'Tous les identifiants',
-			'search_items' => 'Rechercher un identifiant',
-			'add_new_item' => 'Ajouter un identifiant',
-			'edit_item' => 'Modifier l’identifiant',
-			'update_item' => 'Mettre à jour l’identifiant',
-			'parent_item' => 'Identifiant parent',
-			'not_found' => 'Identifiant introuvable',
-			'popular_items' => 'Identifiants récurrents',
-			'new_item_name' => 'Nom du nouvel identifiant'
-		],
-		'hierarchical' => false
-	]);
-
-	register_post_type('litter', [
-		'labels' => [
-			'name' => 'Portées',
-			'singular_name' => 'Portée',
-			'all_items' => 'Toutes les portées',
-			'add_new_items' => 'Ajouter une portée',
-			'edit_item' => 'Modifier la portée',
-			'view_item' => 'Voir la portée',
-			'search_items' => 'Rechercher une portée'
-		],
-		'taxonomies' => ['litter_category'],
-		'supports' => ['title', 'editor' => false, 'thumbnail' => false, 'revisions' => false, 'comments' => false],
-		'description' => 'Permet d’ajouter des souris',
-		'public' => true,
-		'menu_icon' => 'dashicons-awards',
-		'menu_position' => 7
-	]);
-}
-add_action('init', 'sakura_create_post_types');
-
-function sakura_custom_rss ($qv) {
-	if (isset($qv['feed']) && !isset($qv['post_type'])) {
-		$qv['post_type'] = ['souris'];
-	}
-	return $qv;
-}
-add_filter('request', 'sakura_custom_rss');
-
-
-// Removes from admin menu
-function remove_admin_menu () {
-	remove_menu_page('edit-comments.php');
-}
-// add_action('admin_menu', 'remove_admin_menu');
-// Removes from post and pages
-
-function remove_comment_support() {
-	remove_post_type_support('post', 'comments');
-	remove_post_type_support('page', 'comments');
-}
-// add_action('init', 'remove_comment_support', 100);
-// Removes from admin bar
-
-function admin_bar_render() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('comments');
-}
-// add_action('wp_before_admin_bar_render', 'admin_bar_render');
-
-
-remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'wlwmanifest_link');
 
 function debug ($value) { ?>
-<pre style="margin: 1rem 0; padding: 1rem;background: #e4e4e4;border:1px solid: #ccc;"><code><?php var_dump($value); ?></code></pre>
+	<pre style="margin: 1rem 0; padding: 1rem;background: #e4e4e4;border:1px solid: #ccc;"><code><?php var_dump($value); ?></code></pre>
 <?php }
 
 /**
