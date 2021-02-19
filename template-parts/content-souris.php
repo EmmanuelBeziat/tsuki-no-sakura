@@ -82,7 +82,7 @@ $souris = (object) [
 
 			<?php if ($souris->status) : ?>
 				<dt>Status</dt>
-				<dd><?= $souris->status ?> gr</dd>
+				<dd><?= $souris->status['label'] ?> gr</dd>
 			<?php endif ?>
 
 			<?php if ($souris->vente) : ?>
