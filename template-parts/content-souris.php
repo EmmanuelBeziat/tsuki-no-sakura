@@ -48,19 +48,42 @@ $souris = (object) [
 	grid-area: 2 / 1 / 4 / 2;
 	background-image: linear-gradient(to bottom, rgba(35,35,35,0), rgba(35,35,35,1) 30px);
 	padding: calc(2rem + 30px) 2rem 1rem;
-	text-align: center;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
 	grid-template-rows: 1fr 2fr repeat(2, 1fr);
 	gap: 0;
 }
 
-.souris-lineage { grid-area: 1 / 1 / 2 / 3; }
-.souris-sexe { grid-area: 1 / 5 / 3 / 7; }
-.souris-nom { grid-area: 2 / 2 / 4 / 6; }
-.souris-signification { grid-area: 3 / 4 / 4 / 7; }
-.souris-description { grid-area: 4 / 1 / 5 / 4; }
-.souris-infos { grid-area: 4 / 4 / 5 / 7; }
+.souris-lineage {
+	grid-area: 1 / 1 / 2 / 3;
+	margin: auto 0 0 auto;
+	font-size: 3rem;
+}
+.souris-sexe {
+	grid-area: 1 / 5 / 3 / 7;
+	margin: auto auto 0 0;
+	text-align: center;
+}
+.souris-sexe svg {
+	width: 6em;
+	stroke: rgba(255, 255, 255, .5);
+}
+.souris-nom {
+	grid-area: 2 / 2 / 4 / 6;
+	margin: auto;
+	font-size: 8.75rem;
+}
+.souris-signification {
+	grid-area: 3 / 4 / 4 / 7;
+	font-size: 4rem;
+	text-align: left;
+}
+.souris-description {
+	grid-area: 4 / 1 / 5 / 4;
+}
+.souris-infos {
+	grid-area: 4 / 4 / 5 / 7;
+}
 
 </style>
 
