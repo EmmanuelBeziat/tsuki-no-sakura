@@ -361,8 +361,8 @@ template {
 @font-face {
 	font-family: 'Just Another Hand';
 	src: local('Just Another Hand Regular'), local('JustAnotherHand-Regular'),
-		url('JustAnotherHand-Regular.woff2') format('woff2'),
-		url('JustAnotherHand-Regular.woff') format('woff');
+		url('../fonts/JustAnotherHand-Regular.woff2') format('woff2'),
+		url('../fonts/JustAnotherHand-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
@@ -371,8 +371,8 @@ template {
 @font-face {
 	font-family: 'Fredericka the Great';
 	src: local('Fredericka the Great'), local('FrederickatheGreat-Regular'),
-		url('FrederickatheGreat-Regular.woff2') format('woff2'),
-		url('FrederickatheGreat-Regular.woff') format('woff');
+		url('../fonts/FrederickatheGreat-Regular.woff2') format('woff2'),
+		url('../fonts/FrederickatheGreat-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
