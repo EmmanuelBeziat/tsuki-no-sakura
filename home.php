@@ -16,11 +16,13 @@
 	'posts_per_page' => -1
 ]);
 
-if ($loop->have_posts()) :
-	while ($loop->have_posts()) : $loop->the_post();
-		get_template_part('template-parts/card-souris');
-	endwhile;
-endif; ?>
+if ($loop->have_posts()) : ?>
+	<ul>
+	<?php while ($loop->have_posts()) : $loop->the_post(); ?>
+		<li><?php get_template_part('template-parts/card-souris'); ?></li>
+	<?php endwhile; ?>
+	</ul>
+<?php endif; ?>
 </section>
 
 <?php get_footer() ?>
