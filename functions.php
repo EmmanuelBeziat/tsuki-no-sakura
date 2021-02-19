@@ -92,19 +92,19 @@ add_action('after_setup_theme', 'sakura_theme_support');
 /**
  * Register and Enqueue Styles.
  */
-include_once get_template_directory_uri() . '/inc/assets.php';
+include_once get_template_directory() . '/inc/assets.php';
 
 /**
  * REST API
  */
-// require_once get_template_directory_uri() . '/inc/rest.php';
-// require_once get_template_directory_uri() . '/inc/rest-endpoints.php';
+// require_once get_template_directory() . '/inc/rest.php';
+// require_once get_template_directory() . '/inc/rest-endpoints.php';
 
 
 /**
  * Custom Post Types
  */
-require_once get_template_directory_uri() . '/inc/custom-post-types.php';
+require_once get_template_directory() . '/inc/custom-post-types.php';
 
 
 remove_action('wp_head', 'wp_generator');
