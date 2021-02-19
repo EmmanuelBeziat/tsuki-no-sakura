@@ -36,25 +36,30 @@ $souris = (object) [
 
 .souris-picture {
 	grid-area: 1 / 1 / 3 / 2;
+}
+.souris-picture img {
+	display: block;
 	object-fit: cover;
+	min-height: 100%;
+	min-width: 100%;
 }
 .souris-header {
 	color: #fff;
 	grid-area: 2 / 1 / 4 / 2;
-	background-image: linear-gradient(to top, rgba(35,35,35,1), rgba(35,35,35,0) 60px);
+	background-image: linear-gradient(to bottom, rgba(35,35,35,0), rgba(35,35,35,1) 20px);
 	padding: 2rem;
 	text-align: center;
 }
-.souris-content {
-	padding-left: 60px;
-	color: #fff;
-}
+
 </style>
 
 <article <?php post_class('souris') ?> id="souris-<?php the_ID() ?>">
 	<div class="container">
 		<div class="souris-presentation">
-			<img src="<?= $souris->photo ?>" alt="<?= $souris->nom ?>" class="souris-picture">
+			<div class="souris-picture">
+				<img src="<?= $souris->photo ?>" alt="<?= $souris->nom ?>">
+			</div>
+
 			<header class="souris-header">
 				<h1><?= $souris->ID ?> <?= $souris->nom ?></h1>
 			</header>
