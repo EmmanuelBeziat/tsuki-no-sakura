@@ -22,7 +22,7 @@ $souris = (object) [
 	'status' => get_field('autres')['status'],
 	'vente' => get_field('autres')['vente'],
 	'genotype' => get_field('autres')['genotype']
-]
+];
 ?>
 
 <article <?php post_class('souris'); ?> id="souris-<?php the_ID(); ?>">

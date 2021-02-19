@@ -11,6 +11,7 @@
 
 get_header();
 
+echo '<h1>Single-souris</h1>'
 /* Start the Loop */
 while (have_posts()) : the_post();
 	get_template_part('template-parts/souris.php');
