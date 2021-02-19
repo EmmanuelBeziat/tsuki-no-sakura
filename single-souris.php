@@ -11,13 +11,11 @@
 
 get_header();
 
-/* Start the Loop */
-if (have_posts()):
-	echo 'have posts';
+debug(have_posts());
 
+/* Start the Loop */
 while (have_posts()) : the_post();
 	get_template_part('template-parts/souris.php');
 endwhile;
 
-endif;
 get_footer();
