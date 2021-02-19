@@ -8,6 +8,8 @@
  * @since Sakura 1.0
  */
 
+echo ('inside ');
+
 $souris = (object) [
 	'ID' => get_field('presentation')['identifiant']->name,
 	'photo' => get_field('presentation')['photo'],

@@ -2,6 +2,7 @@
 
 <section is="hero" class="hero">
 	<div class="container">
+		<h1>index</h1>
 		<pre>
 		index
 		<?php if (is_home()) : ?> is_home <?php endif ?>

@@ -12,8 +12,8 @@
 get_header();
 
 /* Start the Loop */
-wp_reset_query();
 while (have_posts()) : the_post();
+	echo 'hum';
 	get_template_part('template-parts/souris.php');
 endwhile;
 

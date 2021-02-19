@@ -1,13 +1,19 @@
-<?php get_header() ?>
+<?php
+/**
+ * The template for displaying pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Sakura
+ * @since Sakura 1.0
+ */
 
-<section is="hero" class="hero">
-	<div class="container">
-		<pre>
-		Page
-		<?php if (is_home()) : ?> is_home <?php endif ?>
-		<?php if (is_front_page()) : ?> is_front_page <?php endif ?>
-		</pre>
-	</div>
-</section>
+get_header();
 
-<?php get_footer() ?>
+/* Start the Loop */
+while (have_posts()) : the_post();
+	get_template_part('template-parts/content-page.php');
+endwhile;
+
+get_footer();
