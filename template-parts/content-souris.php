@@ -32,6 +32,8 @@ $souris = (object) [
 		<h1><?= $souris->ID ?> <?= $souris->nom ?></h1>
 	</header>
 
+	<img src="<?= $souris->photo ?>" alt="<?= $souris->nom ?>" class="souris-picture">
+
 	<div class="souris-content">
 		<div class="souris-bio">
 			<dl>
