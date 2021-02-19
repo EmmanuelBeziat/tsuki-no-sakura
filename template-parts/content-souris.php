@@ -50,17 +50,17 @@ $souris = (object) [
 	padding: calc(2rem + 30px) 2rem 1rem;
 	text-align: center;
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
+	grid-template-rows: 1fr 2fr repeat(2, 1fr);
 	gap: 0;
 }
 
-.souris-lineage { grid-area: 1 / 1 / 3 / 2; }
-.souris-sexe { grid-area: 1 / 4 / 3 / 5; }
-.souris-nom { grid-area: 2 / 2 / 4 / 5; }
-.souris-signification { grid-area: 3 / 3 / 5 / 5; }
-.souris-description { grid-area: 5 / 1 / 6 / 3; }
-.souris-infos { grid-area: 5 / 3 / 6 / 5; }
+.souris-lineage { grid-area: 1 / 1 / 2 / 3; }
+.souris-sexe { grid-area: 1 / 5 / 3 / 7; }
+.souris-nom { grid-area: 2 / 2 / 4 / 6; }
+.souris-signification { grid-area: 3 / 4 / 4 / 7; }
+.souris-description { grid-area: 4 / 1 / 5 / 4; }
+.souris-infos { grid-area: 4 / 4 / 5 / 7; }
 
 </style>
 
