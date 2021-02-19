@@ -13,9 +13,7 @@ get_header();
 
 /* Start the Loop */
 while (have_posts()) : the_post();
-	echo 'hum';
 	get_template_part('template-parts/content-souris');
-	echo 'ok';
 endwhile;
 
 get_footer();

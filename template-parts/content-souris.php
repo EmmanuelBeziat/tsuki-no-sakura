@@ -8,8 +8,6 @@
  * @since Sakura 1.0
  */
 
-echo ('inside');
-
 $souris = (object) [
 	'ID' => get_field('presentation')['identifiant']->name,
 	'photo' => get_field('presentation')['photo'],
@@ -20,6 +18,7 @@ $souris = (object) [
 	'naissance' => get_field('origines')['date'],
 	'couleur' => get_field('apparence')['couleur'],
 	'pelage' => get_field('apparence')['poil'],
+	'yeux' => get_field('apparence')['yeux'],
 	'poids' => get_field('apparence')['poids'],
 	'status' => get_field('autres')['status'],
 	'vente' => get_field('autres')['vente'],
@@ -81,9 +80,19 @@ $souris = (object) [
 				<dd><?= $souris->poids ?> gr</dd>
 			<?php endif ?>
 
-			<?php if ($souris->couleur) : ?>
-				<dt></dt>
-				<dd><?= $souris->couleur ?></dd>
+			<?php if ($souris->status) : ?>
+				<dt>Status</dt>
+				<dd><?= $souris->status ?> gr</dd>
+			<?php endif ?>
+
+			<?php if ($souris->vente) : ?>
+				<dt>Vente</dt>
+				<dd><?= $souris->vente ?> gr</dd>
+			<?php endif ?>
+
+			<?php if ($souris->genotype) : ?>
+				<dt>Génotype</dt>
+				<dd><?= $souris->genotype ?></dd>
 			<?php endif ?>
 			</dl>
 		</div>
