@@ -50,7 +50,7 @@ $souris = (object) [
 	padding: calc(2rem + 30px) 2rem 1rem;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
-	grid-template-rows: 1fr 2fr repeat(2, 1fr);
+	grid-template-rows: repeat(4, 1fr);
 	gap: 0;
 }
 
@@ -66,11 +66,12 @@ $souris = (object) [
 }
 .souris-sexe svg {
 	width: 6em;
-	stroke: rgba(255, 255, 255, .5);
+	fill: rgba(255, 255, 255, .5);
 }
 .souris-nom {
 	grid-area: 2 / 2 / 4 / 6;
-	margin: auto;
+	margin: 0 auto auto;
+	font-family: 'Just Another Hand';
 	font-size: 8.75rem;
 }
 .souris-signification {
