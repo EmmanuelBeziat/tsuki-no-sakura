@@ -11,10 +11,8 @@
 
 get_header();
 
-debug(have_posts());
-
 /* Start the Loop */
-while (have_posts()) : the_post();
+while (have_posts()) : debug(the_post());
 	get_template_part('template-parts/souris.php');
 endwhile;
 
