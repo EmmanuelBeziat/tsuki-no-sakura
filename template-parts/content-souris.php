@@ -87,7 +87,7 @@ $souris = (object) [
 
 			<?php if ($souris->vente) : ?>
 				<dt>Vente</dt>
-				<dd><?= $souris->vente ?> gr</dd>
+				<dd><?= $souris->vente['label'] ?></dd>
 			<?php endif ?>
 
 			<?php if ($souris->genotype) : ?>
