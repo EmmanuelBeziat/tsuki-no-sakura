@@ -71,7 +71,7 @@ $souris = (object) [
 .souris-nom {
 	grid-area: 2 / 2 / 4 / 6;
 	margin: 0 auto auto;
-	font-family: 'Just Another Hand';
+	font-family: 'Fredericka the Great';
 	font-size: 8.75rem;
 }
 .souris-signification {
