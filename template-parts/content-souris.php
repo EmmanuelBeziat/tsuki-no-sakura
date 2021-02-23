@@ -101,7 +101,7 @@ $souris = (object) [
 						<div class="swiper-slide">
 							<img src="<?= $gallery['url'] ?>" alt>
 						</div>
-						<?endforeach ?>
+						<?php endforeach ?>
 					</div>
 				</div>
 				<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
