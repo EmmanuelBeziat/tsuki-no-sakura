@@ -20,14 +20,13 @@ function sakura_register_scripts() {
 	}
 
 	// wp_enqueue_script('sakura-js', get_template_directory_uri() . '/assets/css/main.min.js', [], $theme_version, true);
-	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/vendors/swiper/swiper.min.js', [], $theme_version, true);
+	// wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/vendors/swiper/swiper.min.js', [], $theme_version, true);
 	// wp_script_add_data('swiper', 'defer', true);
-	wp_script_add_data('swiper', 'type', 'module');
+	// wp_script_add_data('swiper', 'type', 'module');
 
-	wp_enqueue_script('sakura', get_template_directory_uri() . '/assets/js/main.min.js', [], $theme_version, true);
+	// wp_enqueue_script('sakura', get_template_directory_uri() . '/assets/js/main.min.js', [], $theme_version, true);
 	// wp_script_add_data('sakura', 'defer', true);
-	var_dump(wp_script_add_data('sakura', 'type', 'module'));
-	wp_script_add_data('sakura', 'type', 'module');
+	// wp_script_add_data('sakura', 'type', 'module');
 }
 
 add_action('wp_enqueue_scripts', 'sakura_register_scripts');
