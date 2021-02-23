@@ -38,12 +38,7 @@ $souris = (object) [
 .souris-picture {
 	grid-area: 1 / 1 / 3 / 2;
 }
-.souris-picture img {
-	display: block;
-	object-fit: cover;
-	min-height: 100%;
-	min-width: 100%;
-}
+
 .souris-header {
 	color: #fff;
 	grid-area: 2 / 1 / 4 / 2;
@@ -97,14 +92,13 @@ $souris = (object) [
 						<div class="swiper-slide">
 							<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 						</div>
-						<?php foreach ($souris->gallery as $gallery): ?>
+						<?php if (empty($souris->gallery)): foreach ($souris->gallery as $gallery): ?>
 						<div class="swiper-slide">
 							<img src="<?= $gallery['url'] ?>" alt>
 						</div>
-						<?php endforeach ?>
+						<?php endforeach; endif; ?>
 					</div>
 				</div>
-				<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 			</div>
 
 			<header class="souris-header">
