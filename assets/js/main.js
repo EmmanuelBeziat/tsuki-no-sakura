@@ -2,6 +2,7 @@
 import Swiper from '../vendors/swiper/swiper.min.js'
 
 document.addEventListener('DOMContentLoaded', event => {
+	console.log('init')
 	new Swiper('.swiper-container', {
 		loop: true,
 		slidesPerView: 1,
