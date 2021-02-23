@@ -4,7 +4,7 @@ function sakura_register_styles() {
 	$theme_version = wp_get_theme()->get('Version');
 
 	wp_enqueue_style('swiper', get_template_directory_uri() . '/assets/vendors/swiper/swiper.min.css', [], $theme_version);
-	wp_enqueue_style('sakura-style', get_template_directory_uri() . '/assets/css/main.min.css', [], $theme_version);
+	wp_enqueue_style('sakura', get_template_directory_uri() . '/assets/css/main.min.css', [], $theme_version);
 }
 
 add_action('wp_enqueue_scripts', 'sakura_register_styles');
@@ -24,9 +24,10 @@ function sakura_register_scripts() {
 	// wp_script_add_data('swiper', 'defer', true);
 	wp_script_add_data('swiper', 'type', 'module');
 
-	wp_enqueue_script('sakura-js', get_template_directory_uri() . '/assets/js/main.min.js', [], $theme_version, true);
-	// wp_script_add_data('sakura-js', 'defer', true);
-	wp_script_add_data('sakura-js', 'type', 'module');
+	wp_enqueue_script('sakura', get_template_directory_uri() . '/assets/js/main.min.js', [], $theme_version, true);
+	// wp_script_add_data('sakura', 'defer', true);
+	var_dump(wp_script_add_data('sakura', 'type', 'module'));
+	wp_script_add_data('sakura', 'type', 'module');
 }
 
 add_action('wp_enqueue_scripts', 'sakura_register_scripts');
