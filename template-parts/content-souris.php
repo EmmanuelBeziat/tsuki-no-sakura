@@ -91,6 +91,7 @@ $souris = (object) [
 	<div class="container">
 		<div class="souris-presentation">
 			<div class="souris-picture">
+				<?php debug($souris->photo) ?>
 				<img src="<?= $souris->photo ?>" alt="<?= $souris->nom ?>">
 			</div>
 
