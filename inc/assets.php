@@ -20,7 +20,7 @@ function sakura_register_scripts() {
 	}
 
 	// wp_enqueue_script('sakura-js', get_template_directory_uri() . '/assets/css/main.min.js', [], $theme_version, false);
-	wp_enqueue_script('swiper', get_template_dirctory_uri() . '/assets/vendors/swiper/swiper.min.js', [], $theme_version, true);
+	wp_enqueue_script('swiper', get_template_directory_uri() . '/assets/vendors/swiper/swiper.min.js', [], $theme_version, true);
 	wp_script_add_data('swiper', 'defer', true);
 	wp_script_add_data('swiper', 'type', 'module');
 
