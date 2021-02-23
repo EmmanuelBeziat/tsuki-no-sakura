@@ -22,7 +22,8 @@ $souris = (object) [
 	'poids' => get_field('apparence')['poids'],
 	'status' => get_field('autres')['status'],
 	'vente' => get_field('autres')['vente'],
-	'genotype' => get_field('autres')['genotype']
+	'genotype' => get_field('autres')['genotype'],
+	'gallery' => get_field('gallery')
 ];
 ?>
 
@@ -91,8 +92,19 @@ $souris = (object) [
 	<div class="container">
 		<div class="souris-presentation">
 			<div class="souris-picture">
-				<?php debug($souris->photo) ?>
-				<img src="<?= $souris->photo ?>" alt="<?= $souris->nom ?>">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
+						</div>
+						<?php foreach ($souris->gallery as $gallery): ?>
+						<div class="swiper-slide">
+							<img src="<?= $gallery['url'] ?>" alt>
+						</div>
+						<?endforeach ?>
+					</div>
+				</div>
+				<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 			</div>
 
 			<header class="souris-header">
