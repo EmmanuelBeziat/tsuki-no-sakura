@@ -1,5 +1,4 @@
 // import Skeleton from './modules/skeleton.js'
-import { Swiper } from '../vendors/swiper/swiper.min.js'
 
 document.addEventListener('DOMContentLoaded', event => {
 	console.log('init')

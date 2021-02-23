@@ -44,7 +44,7 @@
 			</footer>
 		</div>
 		<?php wp_footer() ?>
-		<script src="<?= get_template_directory_uri() ?>/assets/vendors/swiper/swiper.min.js" type="module"></script>
+		<!-- <script src="<?= get_template_directory_uri() ?>/assets/vendors/swiper/swiper.min.js" type="module"></script> -->
 		<script src="<?= get_template_directory_uri() ?>/assets/js/main.min.js" type="module"></script>
 	</body>
 </html>
