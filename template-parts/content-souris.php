@@ -40,7 +40,7 @@ $souris = (object) [
 	overflow: hidden;
 }
 
-.souris-picture {
+.souris-picture img {
 	display: block;
 	width: 100%;
 }
