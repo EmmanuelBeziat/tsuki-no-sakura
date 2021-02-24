@@ -100,6 +100,7 @@ $souris = (object) [
 							<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 						</div>
 						<?php if (empty($souris->gallery)): foreach ($souris->gallery as $gallery): ?>
+							<?php debug($gallery) ?>
 						<div class="swiper-slide">
 							<img src="<?= $gallery['url'] ?>" alt>
 						</div>
