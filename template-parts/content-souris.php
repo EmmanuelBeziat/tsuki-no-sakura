@@ -99,7 +99,7 @@ $souris = (object) [
 						<div class="swiper-slide">
 							<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 						</div>
-						<?php foreach ($souris->gallery as $gallery) : if isset(($gallery['url']) && $gallery['url'] != '') : ?>
+						<?php foreach ($souris->gallery as $gallery) : if (isset($gallery['url']) && $gallery['url'] != '') : ?>
 						<div class="swiper-slide">
 							<img src="<?= $gallery['url'] ?>" alt>
 						</div>
