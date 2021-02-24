@@ -37,6 +37,7 @@ $souris = (object) [
 
 .souris-picture {
 	grid-area: 1 / 1 / 3 / 2;
+	overflow: hidden;
 }
 
 .souris-header {
