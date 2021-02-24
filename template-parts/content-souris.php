@@ -99,12 +99,11 @@ $souris = (object) [
 						<div class="swiper-slide">
 							<img src="<?= $souris->photo['url'] ?>" alt="<?= $souris->nom ?>">
 						</div>
-						<?php if (empty($souris->gallery)): foreach ($souris->gallery as $gallery): ?>
-							<?php debug($gallery) ?>
+						<?php foreach ($souris->gallery as $gallery): ?>
 						<div class="swiper-slide">
 							<img src="<?= $gallery['url'] ?>" alt>
 						</div>
-						<?php endforeach; endif; ?>
+						<?php endforeach ?>
 					</div>
 
 					<!-- Add Pagination -->
