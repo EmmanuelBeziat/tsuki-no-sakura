@@ -45,7 +45,7 @@ $souris = (object) [
 	width: 100%;
 }
 
-.souris-header {
+.souris-card {
 	color: #fff;
 	grid-area: 2 / 1 / 4 / 2;
 	background-image: linear-gradient(to bottom, rgba(35,35,35,0), rgba(35,35,35,1) 30px);
@@ -111,7 +111,7 @@ $souris = (object) [
 				</div>
 			</div>
 
-			<header class="souris-header">
+			<section class="souris-card">
 				<div class="souris-lineage"><?= $souris->ID ?></div>
 				<span class="souris-sexe">
 				<?php if ($souris->sexe) : ?>
@@ -175,7 +175,7 @@ $souris = (object) [
 					<?php endif ?>
 					</dl>
 				</div>
-			</header>
+			</section>
 		</div>
 
 		<div class="souris-content">
