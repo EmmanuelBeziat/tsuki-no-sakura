@@ -54,6 +54,8 @@ $souris = (object) [
 	grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
 	grid-template-rows: auto 2fr 1fr auto;
 	gap: 0;
+	position: relative;
+	z-index: 5;
 }
 
 .souris-lineage {
