@@ -85,6 +85,7 @@ add_action('after_setup_theme', 'sakura_theme_support');
 // require get_template_directory() . '/classes/class-sakura-walker-page.php';
 // require get_template_directory() . '/classes/class-sakura-script-loader.php';
 // require get_template_directory() . '/inc/customize.php';
+require get_template_directory() . '/inc/swiper.class.php';
 
 // Custom CSS.
 // require get_template_directory() . '/inc/custom-css.php';
