@@ -6,10 +6,6 @@ document.addEventListener('DOMContentLoaded', event => {
 		loop: true,
 		slidesPerView: 1,
 		effect: 'fade',
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-		},
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: true,
