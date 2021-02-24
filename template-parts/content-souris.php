@@ -40,6 +40,11 @@ $souris = (object) [
 	overflow: hidden;
 }
 
+.souris-picture {
+	display: block;
+	width: 100%;
+}
+
 .souris-header {
 	color: #fff;
 	grid-area: 2 / 1 / 4 / 2;
