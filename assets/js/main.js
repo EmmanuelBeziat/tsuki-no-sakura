@@ -5,8 +5,13 @@ document.addEventListener('DOMContentLoaded', event => {
 	new Swiper('.swiper-container', {
 		loop: true,
 		slidesPerView: 1,
+		effect: 'fade',
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
 		autoplay: {
-			delay: 2500,
+			delay: 5000,
 			disableOnInteraction: true,
 		},
 		keyboard: {

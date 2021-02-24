@@ -93,6 +93,7 @@ $souris = (object) [
 	<div class="container">
 		<div class="souris-presentation">
 			<div class="souris-picture">
+				<!-- Slider -->
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -104,6 +105,9 @@ $souris = (object) [
 						</div>
 						<?php endforeach; endif; ?>
 					</div>
+
+					<!-- Add Pagination -->
+    			<div class="swiper-pagination swiper-pagination-white"></div>
 				</div>
 			</div>
 
